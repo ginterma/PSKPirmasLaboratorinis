@@ -177,66 +177,74 @@
       <NameSurrogate>1</NameSurrogate>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_C21C2045_FD85_466D_9AB2_009CE90D6560">
+    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_63C3217E_80CE_425D_A0BB_09BD2F3A768B">
+      <ObjectId>13</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <sequence id="165" parent="4" name="SYSTEM_SEQUENCE_C21C2045_FD85_466D_9AB2_009CE90D6560">
       <ObjectId>3</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <table id="165" parent="4" name="EMPLOYEE">
+    <table id="166" parent="4" name="EMPLOYEE">
       <ObjectId>12</ObjectId>
     </table>
-    <table id="166" parent="4" name="GROCERIES">
+    <table id="167" parent="4" name="GROCERIES">
       <ObjectId>4</ObjectId>
     </table>
-    <column id="167" parent="165" name="Employee_id">
+    <table id="168" parent="4" name="SHIFTS">
+      <ObjectId>10</ObjectId>
+    </table>
+    <column id="169" parent="166" name="Employee_id">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="168" parent="165" name="Name">
+    <column id="170" parent="166" name="Name">
       <Position>2</Position>
       <DataType>VARCHAR|0s</DataType>
     </column>
-    <column id="169" parent="165" name="LastName">
+    <column id="171" parent="166" name="LastName">
       <Position>3</Position>
       <DataType>VARCHAR|0s</DataType>
     </column>
-    <column id="170" parent="165" name="Salary">
+    <column id="172" parent="166" name="Salary">
       <Position>4</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <index id="171" parent="165" name="EMPLOYEE_EMPLOYEEID_UINDEX">
+    <index id="173" parent="166" name="EMPLOYEE_EMPLOYEEID_UINDEX">
       <ObjectId>14</ObjectId>
       <SourceTextLength>87</SourceTextLength>
       <ColNames>Employee_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <column id="172" parent="166" name="Grocery_id">
+    <column id="174" parent="167" name="Grocery_id">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="173" parent="166" name="Name">
+    <column id="175" parent="167" name="Name">
       <Position>2</Position>
       <DataType>VARCHAR|0s</DataType>
     </column>
-    <column id="174" parent="166" name="BEST BEFORE">
+    <column id="176" parent="167" name="BEST BEFORE">
       <Position>3</Position>
       <DataType>DATE|0s</DataType>
     </column>
-    <column id="175" parent="166" name="ResponsibleEmployeeID">
+    <column id="177" parent="167" name="ResponsibleEmployeeID">
       <Position>4</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <index id="176" parent="166" name="GROCERIES_GROCERYID_UINDEX">
+    <index id="178" parent="167" name="GROCERIES_GROCERYID_UINDEX">
       <ObjectId>5</ObjectId>
       <SourceTextLength>87</SourceTextLength>
       <ColNames>Grocery_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="177" parent="166" name="PRIMARY_KEY_2">
+    <index id="179" parent="167" name="PRIMARY_KEY_2">
       <ObjectId>6</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>73</SourceTextLength>
@@ -244,12 +252,36 @@
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <index id="178" parent="166" name="GROCERIES_EMPLOYEE_EMPLOYEEID_FK_INDEX_5">
+    <index id="180" parent="167" name="GROCERIES_EMPLOYEE_EMPLOYEEID_FK_INDEX_5">
       <ObjectId>8</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>105</SourceTextLength>
       <ColNames>ResponsibleEmployeeID</ColNames>
       <AutoCreated>1</AutoCreated>
+    </index>
+    <column id="181" parent="168" name="Shift_id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="182" parent="168" name="Date">
+      <Position>2</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <index id="183" parent="168" name="PRIMARY_KEY_9">
+      <ObjectId>18</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <SourceTextLength>68</SourceTextLength>
+      <ColNames>Shift_id</ColNames>
+      <Unique>1</Unique>
+      <AutoCreated>1</AutoCreated>
+    </index>
+    <index id="184" parent="168" name="SHIFTS_SHIFT_ID_UINDEX">
+      <ObjectId>16</ObjectId>
+      <SourceTextLength>78</SourceTextLength>
+      <ColNames>Shift_id</ColNames>
+      <Unique>1</Unique>
     </index>
   </database-model>
 </dataSource>

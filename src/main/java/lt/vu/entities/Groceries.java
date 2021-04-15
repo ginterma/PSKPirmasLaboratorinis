@@ -29,8 +29,5 @@ public class Groceries implements Serializable {
 
     @Column(name = "ResponsibleEmployeeID")
     private Integer EmployeeId;
-    public Groceries(){
-
-    }
 
 }

@@ -28,8 +28,4 @@ public class Employee implements Serializable {
     @Column(name = "Salary")
     private int salary;
 
-    public Employee (){
-
-    }
-
 }
