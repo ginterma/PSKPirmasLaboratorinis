@@ -1,0 +1,6 @@
+<datasources>
+    <datasource jndi-name="MaximaDataSource" pool-name="MaximaDataSource">
+        <driver>h2</driver>
+        <connection-url>jdbc:h2:~/h2database/MaximaDB;AUTO_SERVER=TRUE</connection-url>
+    </datasource>
+</datasources>

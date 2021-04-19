@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-    <context id="CarShopDB" targetRuntime="MyBatis3Simple">
+    <context id="MaximaDB" targetRuntime="MyBatis3Simple">
         <jdbcConnection driverClass="org.h2.Driver"
                         connectionURL="jdbc:h2:~/h2database/MaximaDB;AUTO_SERVER=TRUE">
         </jdbcConnection>
@@ -15,6 +15,9 @@
         </table>
         <table schema="PUBLIC" tableName="GROCERIES">
             <generatedKey column="Grocery_id" identity="true" sqlStatement="JDBC" />
+        </table>
+        <table schema="PUBLIC" tableName="SHIFTS">
+            <generatedKey column="Shift_id" identity="true" sqlStatement="JDBC" />
         </table>
     </context>
 </generatorConfiguration>

@@ -1,4 +1,4 @@
-package lt.vu.mybatis.persistence;
+package lt.vu.persistence;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;

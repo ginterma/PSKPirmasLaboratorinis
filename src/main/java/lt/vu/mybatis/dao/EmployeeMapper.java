@@ -1,6 +1,7 @@
 package lt.vu.mybatis.dao;
 
 import java.util.List;
+
 import lt.vu.mybatis.model.Employee;
 import org.mybatis.cdi.Mapper;
 
@@ -21,4 +22,6 @@ public interface EmployeeMapper {
      * @mbg.generated Fri Mar 26 19:18:07 EET 2021
      */
     List<Employee> selectAll();
+
+    int deleteByPrimaryKey(Integer id);
 }
