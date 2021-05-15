@@ -6,8 +6,8 @@
     <persistence-unit name="MaximaPU" transaction-type="JTA">
         <jta-data-source>MaximaDataSource</jta-data-source>
         <class>lt.vu.entities.Employee</class>
-        <class>lt.vu.entities.Groceries</class>
-        <class>lt.vu.entities.Shift</class>
+        <!-- <class>lt.vu.entities.Grocery</class> -->
+        <!-- <class>lt.vu.entities.Shift</class> -->
         <properties>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>

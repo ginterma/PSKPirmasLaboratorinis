@@ -37,7 +37,7 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.196</version>
+            <version>1.4.200</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -71,7 +71,7 @@
                     <artifactId>mybatis-generator-maven-plugin</artifactId>
                     <version>1.4.0</version>
                     <configuration>
-                        <contexts>MaximaDB</contexts>
+                        <contexts>MaximaDB5</contexts>
                         <verbose>true</verbose>
                         <jdbcDriver>h2</jdbcDriver>
                     </configuration>
@@ -87,7 +87,7 @@
                         <dependency>
                             <groupId>com.h2database</groupId>
                             <artifactId>h2</artifactId>
-                            <version>1.4.196</version>
+                            <version>1.4.200</version>
                         </dependency>
                     </dependencies>
                 </plugin>

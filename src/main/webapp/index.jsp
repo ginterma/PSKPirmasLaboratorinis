@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
->
-<h:head/>
-<h:body>
-    <h2>Teams:</h2>
-    <ol>
-        <ui:repeat value="#{MyBatisResources.allTeams}" var="team">
-            <li><h:link value="#{team.name}" outcome="players?teamId=#{team.id}" /></li>
-        </ui:repeat>
-    </ol>
-    <h:form>
-        <h:inputText value="#{teams.teamToCreate.name}" required="true" />
-        <h:commandButton value="Add new team" action="#{teams.createTeam}" />
-    </h:form>
-    <h:link outcome="myBatis/teams" value="MyBatis implementation"/>
-    <br/>
-    #{pirmasKomponentas.sakykLabas()}
-</h:body>
-</html>
+<h2>Employees:</h2>
+<ol>
+    <ui:repeat value="#{employees.employeesFromDB}" var="employee">
+        <li><h:link value="#{employee.name}" outcome="Employees?employeeId=#{employee.employeeId}" /></li>
+    </ui:repeat>
+</ol>
+<h:form>
+    <h:inputText value="#{employees.myEmployee.name}" required="true" />
+    <h:commandButton value="Add new team" action="#{employees.createEmployee}" />
+</h:form>
+<h:link outcome="employees" value="MyBatis implementation"/>
+<br/>

@@ -10,12 +10,12 @@ import java.util.Objects;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Groceries.findAll", query = "select a from Groceries as a")
+        @NamedQuery(name = "Grocery.findAll", query = "select a from Grocery as a")
 })
 
 @Getter@Setter
-@Table(name = "Groceries")
-public class Groceries implements Serializable {
+@Table(name = "Grocery")
+public class Grocery implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer GroceryId;
@@ -24,10 +24,13 @@ public class Groceries implements Serializable {
     @Column(name = "Name")
     private String name;
 
-    @Column(name = "Best Before")
+    @Column(name = "BEST_BEFORE")
     private Date date;
 
-    @Column(name = "ResponsibleEmployeeID")
+    @Column(name = "Employee_ID")
     private Integer EmployeeId;
+
+    @ManyToOne
+    private Employee employee;
 
 }

@@ -3,21 +3,21 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-    <context id="MaximaDB" targetRuntime="MyBatis3Simple">
+    <context id="Maxima" targetRuntime="MyBatis3Simple">
         <jdbcConnection driverClass="org.h2.Driver"
-                        connectionURL="jdbc:h2:~/h2database/MaximaDB;AUTO_SERVER=TRUE">
+                        connectionURL="jdbc:h2:~/h2database/Maxima;AUTO_SERVER=TRUE">
         </jdbcConnection>
         <javaModelGenerator targetPackage="lt.vu.mybatis.model" targetProject="MAVEN" />
         <sqlMapGenerator targetPackage="lt.vu.mybatis.xml" targetProject="MAVEN" />
         <javaClientGenerator type="XMLMAPPER" targetPackage="lt.vu.mybatis.dao" targetProject="MAVEN" />
-        <table schema="PUBLIC" tableName="Employee">
-            <generatedKey column="Employee_id" identity="true" sqlStatement="JDBC" />
+        <table schema="PUBLIC" tableName="EMPLOYEE">
+            <generatedKey column="ID" identity="true" sqlStatement="JDBC" />
         </table>
-        <table schema="PUBLIC" tableName="GROCERIES">
-            <generatedKey column="Grocery_id" identity="true" sqlStatement="JDBC" />
+        <table schema="PUBLIC" tableName="GROCERY">
+            <generatedKey column="ID" identity="true" sqlStatement="JDBC" />
         </table>
-        <table schema="PUBLIC" tableName="SHIFTS">
-            <generatedKey column="Shift_id" identity="true" sqlStatement="JDBC" />
+        <table schema="PUBLIC" tableName="SHIFT">
+            <generatedKey column="ID" identity="true" sqlStatement="JDBC" />
         </table>
     </context>
 </generatorConfiguration>
