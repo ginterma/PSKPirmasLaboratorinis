@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+        xmlns:b="http://xmlns.jcp.org/jsf/passthrough">
+<h:head/>
+<h:body>
+    <h2>Employees:</h2>
+    <ol>
+        <ui:repeat value="#{employees.employeesFromDB}" var="employee">
+            <li><h:link value="#{employee.name}" outcome="EmployeeDetails?employeeId=#{employee.employeeId}"  /> salary: #{employee.salary} Euro</li>
+        </ui:repeat>
+    </ol>
+    <h:form>
+        <h:inputText b:placeholder="name" value="#{employees.myEmployee.name}" required="true" />
+        <h:inputText b:placeholder="salary" value="#{employees.myEmployee.salary}" required="true"/>
+        <h:commandButton value="Add Employee" action="#{employees.createEmployee}" />
+    </h:form>
+    <br/>
+    <h3>
+        Shifts:
+    </h3>
+    <ol>
+        <ui:repeat value = "#{shifts.shiftsFromDB}" var="shift">
+            <li><h:link value="#{shift.date}" outcome="ShiftDetails?shiftId=#{shift.shiftId}"/> </li>
+        </ui:repeat>
+    </ol>
+    <h:form>
+        <h:inputText b:placeholder="date" value="#{shifts.shiftToCreate.date}" required="true"/>
+        <h:commandButton value="Add Shift" action="#{shifts.createShift}"/>
+    </h:form>
+</h:body>
+</html>
