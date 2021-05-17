@@ -21,19 +21,11 @@ public class Employee implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer employeeId;
 
-
+    @Column(name= "NAME")
     private String name;
+    @Column(name = "SALARY")
     private int salary;
 
-    @Basic
-    @Column(name= "NAME")
-    public String getName () {return this.name;}
-    public void setName(String name) {this.name=name; }
-
-    @Basic
-    @Column(name = "SALARY")
-    public int getSalary() {return this.salary;}
-    public void setSalary(int salary) {this.salary = salary;}
 
 
     @OneToMany(mappedBy = "employee")

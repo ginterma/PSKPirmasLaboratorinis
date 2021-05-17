@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="H2 - Maxima" uuid="b96f99df-727b-4eb1-be25-8d644f3165ca">
+    <data-source source="LOCAL" name="Maxima" uuid="c75a7817-e151-486d-bc02-d94df2c29fec">
       <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.h2.Driver</jdbc-driver>

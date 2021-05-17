@@ -24,4 +24,6 @@ public class GroceriesDAO {
     public Grocery findGroceriesById (Integer id) {return entityManager.find(Grocery.class, id);}
 
     public Grocery updateEmployee(Grocery grocery) {return entityManager.merge(grocery);}
+
+    public void removes (Grocery grocery) {this.entityManager.remove(grocery);}
 }

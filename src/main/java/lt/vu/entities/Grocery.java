@@ -25,10 +25,8 @@ public class Grocery implements Serializable {
     private String name;
 
     @Column(name = "BEST_BEFORE")
-    private Date date;
+    private String date;
 
-    @Column(name = "Employee_ID")
-    private Integer EmployeeId;
 
     @ManyToOne
     private Employee employee;

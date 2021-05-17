@@ -22,7 +22,7 @@ public class Shift implements Serializable {
     private Integer ShiftId;
 
     @Column(name = "Date")
-    private Date date;
+    private String date;
 
     @ManyToMany
     private List<Employee> employees;

@@ -19,7 +19,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="MaximaPU" value="b96f99df-727b-4eb1-be25-8d644f3165ca" />
+          <factory-entry name="MaximaPU" value="c75a7817-e151-486d-bc02-d94df2c29fec" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
