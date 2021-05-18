@@ -17,8 +17,8 @@
     </environment>
   </environments>
   <mappers>
-    <mapper resource="mybatis.xml/EmployeeMapper.xml"/>
-    <mapper resource="mybatis.xml/GroceriesMapper.xml"/>
-    <mapper resource="mybatis.xml/ShiftsMapper.xml"/>
+    <mapper resource="mybatis/EmployeeMapper.xml"/>
+    <mapper resource="mybatis/GroceryMapper.xml"/>
+    <mapper resource="mybatis/ShiftMapper.xml"/>
   </mappers>
 </configuration>

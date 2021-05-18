@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://xmlns.jcp.org/jsf/passthrough">
+<h:head/>
+<h:body>
+    <h2>Employee: #{employeeShifts.employee.name}</h2>
+    <h3>Shifts:</h3>
+    <ol>
+        <ui:repeat value="#{employeeShifts.employee.shifts}" var="shift">
+            <li>#{shift.date}</li>
+        </ui:repeat>
+    </ol>
+    <h3>Groceries</h3>
+    <ol>
+        <ui:repeat value="#{employeeGroceries.employee.groceryList}" var="grocery">
+            <li>Grocery name: #{grocery.name} <br/> Best Before: #{grocery.date}</li>
+        </ui:repeat>
+    </ol>
+    <h:form>
+        <h:inputText b:placeholder="name" value="#{employeeGroceries.groceryToCreate.name}" required="true"/>
+        <h:inputText b:placeholder="best_before" value="#{employeeGroceries.groceryToCreate.date}" required="true"/>
+        <h:commandButton value="Add grocery" action="#{employeeGroceries.createGroceries}" >
+            <f:param name="employeeId" value="#{employeeGroceries.employee.employeeId}" />
+        </h:commandButton>
+    </h:form>
+    <h:link outcome="index" value="Back to index"/>
+</h:body>
+</html>

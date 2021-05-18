@@ -22,13 +22,13 @@ public class EmployeesMyBatis {
     private Employee employeeToCreate = new Employee();
 
     @PostConstruct
-    public void init(){this.getAllEmployees();}
+    public void init(){this.getEmployeesFromDB();}
 
     public void getEmployeesFromDB(){this.allEmployees = employeeMapper.selectAll();}
 
     @Transactional
     public String createEmployee(){
     employeeMapper.insert(employeeToCreate);
-    return "EmployeesMyBatis?faces-redirect=true";
+    return "EmployeeDetails?faces-redirect=true";
     }
 }
