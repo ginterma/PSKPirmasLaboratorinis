@@ -17,6 +17,10 @@ import java.util.List;
 @Table(name="Shift")
 public class Shift implements Serializable {
 
+    @Version
+    @Column(name = "OPT_LOCK_VERSION")
+    private Integer version;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ShiftId;

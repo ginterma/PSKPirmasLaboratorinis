@@ -17,6 +17,10 @@ import java.util.Objects;
 public class Employee implements Serializable {
     public Employee () {}
 
+    @Version
+    @Column(name = "OPT_LOCK_VERSION")
+    private Integer version;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer employeeId;

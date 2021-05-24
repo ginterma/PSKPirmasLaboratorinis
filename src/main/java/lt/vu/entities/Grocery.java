@@ -16,6 +16,11 @@ import java.util.Objects;
 @Getter@Setter
 @Table(name = "Grocery")
 public class Grocery implements Serializable {
+
+    @Version
+    @Column(name = "OPT_LOCK_VERSION")
+    private Integer version;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer GroceryId;

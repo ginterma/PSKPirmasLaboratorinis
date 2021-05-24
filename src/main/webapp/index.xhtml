@@ -11,7 +11,7 @@
     <h2>Employees:</h2>
     <ol>
         <ui:repeat value="#{employees.employeesFromDB}" var="employee">
-            <li><h:link value="#{employee.name}" outcome="EmployeeDetails?employeeId=#{employee.employeeId}"  /> salary: #{employee.salary} Euro</li>
+            <li><h:link value="#{employee.name}" outcome="EmployeeDetails?employeeId=#{employee.employeeId}"  /> salary: #{employee.salary} Euro <br/> Number of shifts: #{employee.shifts.size()}</li>
         </ui:repeat>
     </ol>
     <h:form>
